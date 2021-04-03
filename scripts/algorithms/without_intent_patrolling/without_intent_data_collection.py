@@ -23,8 +23,14 @@ class CR:
 
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
-        print(self.dead_nodes)
-        self.network_arr = {}
+
+        # Variable for storing data in sheets
+        self.data_arr = np.zeros(0)
+        self.global_idle = np.zeros(len(nodes))
+        self.stamps = np.zeros(0) 
+
+
+        self.network_arr = {}   #For storing data of all IoT devices
 
         for i in self.nodes:
             self.network_arr['node_{}'.format(i)] = {}
@@ -45,6 +51,14 @@ class CR:
                 for i in self.nodes:
                     self.network_arr['node_{}'.format(n)][i] += dev
 
+            for n in data.node_id:
+                if n not in self.dead_nodes:
+                    self.network_arr['node_{}'.format(n)][n] = 0
+                    for neigh_node in list(self.graph.successors(n)) :
+                        if neigh_node not in self.dead_nodes:
+                            self.network_arr['node_{}'.format(neigh_node)][n] = 0.
+            # self.global_idle +=dev
+
             
     
     def callback_next_task(self, req):
@@ -53,11 +67,12 @@ class CR:
         bot = req.name
         neigh = list(self.graph.successors(node))
         idles = []
-        if node not in self.dead_nodes:
-            self.network_arr['node_{}'.format(node)][node] = 0
-            for neigh_node in list(self.graph.successors(node)) :
-                if neigh_node not in self.dead_nodes:
-                    self.network_arr['node_{}'.format(neigh_node)][node] = 0.
+        # self.global_idle[node] = 0
+        # if node not in self.dead_nodes:
+        #     self.network_arr['node_{}'.format(node)][node] = 0
+        #     for neigh_node in list(self.graph.successors(node)) :
+        #         if neigh_node not in self.dead_nodes:
+        #             self.network_arr['node_{}'.format(neigh_node)][node] = 0.
 
         if node not in self.dead_nodes:
             # print(node,self.dead_nodes)
