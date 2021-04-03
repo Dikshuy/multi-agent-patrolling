@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Monday 25 May 2020 12:24:25 PM IST by Eclipse SUMO netedit Version 1.6.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="cair.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="cair.net.xml"/>
+        <plain-output-prefix value="/home/sdeepakmallya/osm_to_sumo/cair"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<nodes version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <location netOffset="-789377.98,-1437095.08" convBoundary="0.00,0.00,192.99,356.02" origBoundary="77.667531,12.983895,77.669660,12.989973" projParameter="+proj=utm +zone=43 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <node id="1154147726" x="104.54" y="353.36" type="priority" shape="111.55,350.46 111.27,356.85 96.94,356.34 97.12,349.95 99.32,349.57 100.06,349.03 100.57,348.27 100.84,347.29 100.87,346.07 107.26,345.66 107.86,348.25 108.48,349.17 109.29,349.85 110.32,350.28"/>
+    <node id="1154147727" x="166.07" y="356.02" type="priority"/>
+    <node id="1154147728" x="0.00" y="350.38" type="priority"/>
+    <node id="1563324011" x="192.99" y="193.98" type="priority"/>
+    <node id="1563324324" x="107.38" y="60.27" type="priority"/>
+    <node id="1563324327" x="30.04" y="137.68" type="priority"/>
+    <node id="1563324336" x="106.28" y="136.90" type="priority"/>
+    <node id="1563324343" x="58.85" y="217.85" type="priority"/>
+    <node id="1563324344" x="59.94" y="174.12" type="priority"/>
+    <node id="1563324348" x="105.97" y="260.65" type="priority"/>
+    <node id="1563324349" x="62.65" y="282.85" type="priority"/>
+    <node id="1563324353" x="29.62" y="248.51" type="priority"/>
+    <node id="1563324357" x="60.30" y="252.52" type="priority"/>
+    <node id="414035791" x="108.39" y="0.00" type="priority"/>
+    <node id="cluster_1563324002_1563324346" x="105.73" y="184.08" type="priority"/>
+    <node id="cluster_1563324004_1563324334" x="106.82" y="218.00" type="priority"/>
+    <node id="cluster_1563324010_1563324356" x="103.85" y="326.67" type="priority"/>
+    <node id="cluster_1563324333_1563324337" x="62.57" y="131.00" type="priority" shape="70.70,120.72 66.54,125.59 64.39,127.59 63.77,131.32 63.38,136.32 63.19,142.20 63.13,148.55 56.73,148.55 56.29,146.27 55.74,145.42 54.97,144.76 53.98,144.29 52.77,144.01 53.63,137.67 54.31,134.49 56.09,130.48 58.69,126.44 59.49,124.13 61.27,123.06 62.48,121.91 67.92,118.55 68.76,119.52 69.59,119.98"/>
+</nodes>

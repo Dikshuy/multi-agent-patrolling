@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Saturday 03 April 2021 11:50:48 AM IST by Eclipse SUMO GUI Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/dikshant/pat_ws/src/pat_code_local_sharing/graph_sumo/grid_5_5.net.xml"/>
+        <route-files value="/home/dikshant/pat_ws/src/pat_code_local_sharing/graph_sumo/simulation.rou.xml"/>
+    </input>
+
+    <output>
+        <fcd-output value="/home/dikshant/pat_ws/src/pat_code_local_sharing/outputs/test_vehicle.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <processing>
+        <collision.action value="none"/>
+    </processing>
+
+    <report>
+        <duration-log.disable value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="37229"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="/home/dikshant/pat_ws/src/pat_code_local_sharing/graph_sumo/simulation.settings.xml"/>
+    </gui_only>
+
+</configuration>

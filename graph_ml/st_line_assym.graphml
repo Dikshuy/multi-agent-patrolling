@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="name" attr.type="string" for="edge" id="d3" />
+  <key attr.name="length" attr.type="double" for="edge" id="d2" />
+  <key attr.name="x" attr.type="double" for="node" id="d1" />
+  <key attr.name="y" attr.type="double" for="node" id="d0" />
+  <graph edgedefault="directed">
+    <node id="gneJ5">
+      <data key="d0">100.0</data>
+      <data key="d1">800.0</data>
+    </node>
+    <node id="gneJ4">
+      <data key="d0">100.0</data>
+      <data key="d1">600.0</data>
+    </node>
+    <node id="gneJ3">
+      <data key="d0">100.0</data>
+      <data key="d1">300.0</data>
+    </node>
+    <node id="gneJ1">
+      <data key="d0">100.0</data>
+      <data key="d1">100.0</data>
+    </node>
+    <node id="gneJ0">
+      <data key="d0">100.0</data>
+      <data key="d1">0.0</data>
+    </node>
+    <edge source="gneJ5" target="gneJ4">
+      <data key="d2">200.0</data>
+      <data key="d3">gneE9</data>
+    </edge>
+    <edge source="gneJ4" target="gneJ5">
+      <data key="d2">200.0</data>
+      <data key="d3">gneE7</data>
+    </edge>
+    <edge source="gneJ4" target="gneJ3">
+      <data key="d2">300.0</data>
+      <data key="d3">gneE6</data>
+    </edge>
+    <edge source="gneJ3" target="gneJ4">
+      <data key="d2">300.0</data>
+      <data key="d3">gneE5</data>
+    </edge>
+    <edge source="gneJ3" target="gneJ1">
+      <data key="d2">200.0</data>
+      <data key="d3">gneE4</data>
+    </edge>
+    <edge source="gneJ1" target="gneJ3">
+      <data key="d2">200.0</data>
+      <data key="d3">gneE3</data>
+    </edge>
+    <edge source="gneJ1" target="gneJ0">
+      <data key="d2">100.0</data>
+      <data key="d3">gneE1</data>
+    </edge>
+    <edge source="gneJ0" target="gneJ1">
+      <data key="d2">100.0</data>
+      <data key="d3">gneE0</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,92 @@
+<!-- filename: hello.edg.xml -->
+<edges>
+  <edge from="0" id="0to5" to="5" numLanes="2"/>
+  <edge from="5" id="5to0" to="0" numLanes="2"/>
+  <edge from="5" id="5to10" to="10" numLanes="2"/>
+  <edge from="10" id="10to5" to="5" numLanes="2"/>
+  <edge from="10" id="10to15" to="15" numLanes="2"/>
+  <edge from="15" id="15to10" to="10" numLanes="2"/>
+  <edge from="15" id="15to20" to="20" numLanes="2"/>
+  <edge from="20" id="20to15" to="15" numLanes="2"/>
+
+  <edge from="1" id="1to6" to="6" numLanes="2"/>
+  <edge from="6" id="6to1" to="1" numLanes="2"/>
+  <edge from="6" id="6to11" to="11" numLanes="2"/>
+  <edge from="11" id="11to6" to="6" numLanes="2"/>
+  <edge from="11" id="11to16" to="16" numLanes="2"/>
+  <edge from="16" id="16to11" to="11" numLanes="2"/>
+  <edge from="16" id="16to21" to="21" numLanes="2"/>
+  <edge from="21" id="21to16" to="16" numLanes="2"/>
+
+  <edge from="2" id="2to7" to="7" numLanes="2"/>
+  <edge from="7" id="7to2" to="2" numLanes="2"/>
+  <edge from="7" id="7to12" to="12" numLanes="2"/>
+  <edge from="12" id="12to7" to="7" numLanes="2"/>
+  <edge from="12" id="12to17" to="17" numLanes="2"/>
+  <edge from="17" id="17to12" to="12" numLanes="2"/>
+  <edge from="17" id="17to22" to="22" numLanes="2"/>
+  <edge from="22" id="22to17" to="17" numLanes="2"/>
+
+  <edge from="3" id="3to8" to="8" numLanes="2"/>
+  <edge from="8" id="8to3" to="3" numLanes="2"/>
+  <edge from="8" id="8to13" to="13" numLanes="2"/>
+  <edge from="13" id="13to8" to="8" numLanes="2"/>
+  <edge from="13" id="13to18" to="18" numLanes="2"/>
+  <edge from="18" id="18to13" to="13" numLanes="2"/>
+  <edge from="18" id="18to23" to="23" numLanes="2"/>
+  <edge from="23" id="23to18" to="18" numLanes="2"/>
+
+  <edge from="4" id="4to9" to="9" numLanes="2"/>
+  <edge from="9" id="9to4" to="4" numLanes="2"/>
+  <edge from="9" id="9to14" to="14" numLanes="2"/>
+  <edge from="14" id="14to9" to="9" numLanes="2"/>
+  <edge from="14" id="14to19" to="19" numLanes="2"/> 
+  <edge from="19" id="19to14" to="14" numLanes="2"/>
+  <edge from="19" id="19to24" to="24" numLanes="2"/>
+  <edge from="24" id="24to19" to="19" numLanes="2"/>
+
+  <edge from="0" id="0to1" to="1" numLanes="2"/>
+  <edge from="1" id="1to0" to="0" numLanes="2"/>
+  <edge from="1" id="1to2" to="2" numLanes="2"/>
+  <edge from="2" id="2to1" to="1" numLanes="2"/>
+  <edge from="2" id="2to3" to="3" numLanes="2"/>
+  <edge from="3" id="3to2" to="2" numLanes="2"/>
+  <edge from="3" id="3to4" to="4" numLanes="2"/>
+  <edge from="4" id="4to3" to="3" numLanes="2"/>
+
+  <edge from="5" id="5to6" to="6" numLanes="2"/>
+  <edge from="6" id="6to5" to="5" numLanes="2"/>
+  <edge from="6" id="6to7" to="7" numLanes="2"/> 
+  <edge from="7" id="7to6" to="6" numLanes="2"/>
+  <edge from="7" id="7to8" to="8" numLanes="2"/>
+  <edge from="8" id="8to7" to="7" numLanes="2"/>
+  <edge from="8" id="8to9" to="9" numLanes="2"/>
+  <edge from="9" id="9to8" to="8" numLanes="2"/>
+
+  <edge from="10" id="10to11" to="11" numLanes="2"/>
+  <edge from="11" id="11to10" to="10" numLanes="2"/>
+  <edge from="11" id="11to12" to="12" numLanes="2"/>
+  <edge from="12" id="12to11" to="11" numLanes="2"/>
+  <edge from="12" id="12to13" to="13" numLanes="2"/>
+  <edge from="13" id="13to12" to="12" numLanes="2"/>
+  <edge from="13" id="13to14" to="14" numLanes="2"/>
+  <edge from="14" id="14to13" to="13" numLanes="2"/> 
+
+  <edge from="15" id="15to16" to="16" numLanes="2"/>
+  <edge from="16" id="16to15" to="15" numLanes="2"/>
+  <edge from="16" id="16to17" to="17" numLanes="2"/>
+  <edge from="17" id="17to16" to="16" numLanes="2"/>
+  <edge from="17" id="17to18" to="18" numLanes="2"/>
+  <edge from="18" id="18to17" to="17" numLanes="2"/>
+  <edge from="18" id="18to19" to="19" numLanes="2"/>
+  <edge from="19" id="19to18" to="18" numLanes="2"/>
+
+  <edge from="20" id="20to21" to="21" numLanes="2"/>
+  <edge from="21" id="21to20" to="20" numLanes="2"/>
+  <edge from="21" id="21to22" to="22" numLanes="2"/>
+  <edge from="22" id="22to21" to="21" numLanes="2"/>
+  <edge from="22" id="22to23" to="23" numLanes="2"/>
+  <edge from="23" id="23to22" to="22" numLanes="2"/>
+  <edge from="23" id="23to24" to="24" numLanes="2"/>
+  <edge from="24" id="24to23" to="23" numLanes="2"/> 
+</edges>

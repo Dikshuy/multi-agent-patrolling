@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="name" attr.type="string" for="edge" id="d3" />
+  <key attr.name="length" attr.type="double" for="edge" id="d2" />
+  <key attr.name="x" attr.type="double" for="node" id="d1" />
+  <key attr.name="y" attr.type="double" for="node" id="d0" />
+  <graph edgedefault="directed">
+    <node id="gneJ14">
+      <data key="d0">100.0</data>
+      <data key="d1">600.0</data>
+    </node>
+    <node id="gneJ12">
+      <data key="d0">100.0</data>
+      <data key="d1">900.0</data>
+    </node>
+    <node id="gneJ11">
+      <data key="d0">100.0</data>
+      <data key="d1">800.0</data>
+    </node>
+    <node id="gneJ10">
+      <data key="d0">100.0</data>
+      <data key="d1">700.0</data>
+    </node>
+    <node id="gneJ7">
+      <data key="d0">100.0</data>
+      <data key="d1">500.0</data>
+    </node>
+    <node id="gneJ6">
+      <data key="d0">100.0</data>
+      <data key="d1">400.0</data>
+    </node>
+    <node id="gneJ5">
+      <data key="d0">100.0</data>
+      <data key="d1">300.0</data>
+    </node>
+    <node id="gneJ4">
+      <data key="d0">100.0</data>
+      <data key="d1">200.0</data>
+    </node>
+    <node id="gneJ3">
+      <data key="d0">100.0</data>
+      <data key="d1">100.0</data>
+    </node>
+    <node id="gneJ2">
+      <data key="d0">100.0</data>
+      <data key="d1">0.0</data>
+    </node>
+    <edge source="gneJ14" target="gneJ7">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE10</data>
+    </edge>
+    <edge source="gneJ14" target="gneJ10">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE11</data>
+    </edge>
+    <edge source="gneJ12" target="gneJ11">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE9</data>
+    </edge>
+    <edge source="gneJ11" target="gneJ12">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE9</data>
+    </edge>
+    <edge source="gneJ11" target="gneJ10">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE8</data>
+    </edge>
+    <edge source="gneJ10" target="gneJ14">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE11</data>
+    </edge>
+    <edge source="gneJ10" target="gneJ11">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE8</data>
+    </edge>
+    <edge source="gneJ7" target="gneJ6">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE5</data>
+    </edge>
+    <edge source="gneJ7" target="gneJ14">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE10</data>
+    </edge>
+    <edge source="gneJ6" target="gneJ7">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE5</data>
+    </edge>
+    <edge source="gneJ6" target="gneJ5">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE4</data>
+    </edge>
+    <edge source="gneJ5" target="gneJ6">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE4</data>
+    </edge>
+    <edge source="gneJ5" target="gneJ4">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE3</data>
+    </edge>
+    <edge source="gneJ4" target="gneJ5">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE3</data>
+    </edge>
+    <edge source="gneJ4" target="gneJ3">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE2</data>
+    </edge>
+    <edge source="gneJ3" target="gneJ4">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE2</data>
+    </edge>
+    <edge source="gneJ3" target="gneJ2">
+      <data key="d2">10.0</data>
+      <data key="d3">-gneE1</data>
+    </edge>
+    <edge source="gneJ2" target="gneJ3">
+      <data key="d2">10.0</data>
+      <data key="d3">gneE1</data>
+    </edge>
+  </graph>
+</graphml>

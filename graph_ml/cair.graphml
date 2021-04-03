@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key attr.name="length" attr.type="double" for="edge" id="d3"/>
+<key attr.name="name" attr.type="string" for="edge" id="d2"/>
+<key attr.name="y" attr.type="double" for="node" id="d1"/>
+<key attr.name="x" attr.type="double" for="node" id="d0"/>
+<graph edgedefault="directed"><node id="1154147726">
+  <data key="d0">104.54</data>
+  <data key="d1">353.36</data>
+</node>
+<node id="1154147727">
+  <data key="d0">166.07</data>
+  <data key="d1">356.02</data>
+</node>
+<node id="1154147728">
+  <data key="d0">0.0</data>
+  <data key="d1">350.38</data>
+</node>
+<node id="1563324011">
+  <data key="d0">192.99</data>
+  <data key="d1">193.98</data>
+</node>
+<node id="1563324324">
+  <data key="d0">107.38</data>
+  <data key="d1">60.27</data>
+</node>
+<node id="1563324327">
+  <data key="d0">30.04</data>
+  <data key="d1">137.68</data>
+</node>
+<node id="1563324336">
+  <data key="d0">106.28</data>
+  <data key="d1">136.9</data>
+</node>
+<node id="1563324343">
+  <data key="d0">58.85</data>
+  <data key="d1">217.85</data>
+</node>
+<node id="1563324344">
+  <data key="d0">59.94</data>
+  <data key="d1">174.12</data>
+</node>
+<node id="1563324348">
+  <data key="d0">105.97</data>
+  <data key="d1">260.65</data>
+</node>
+<node id="1563324349">
+  <data key="d0">62.65</data>
+  <data key="d1">282.85</data>
+</node>
+<node id="1563324353">
+  <data key="d0">29.62</data>
+  <data key="d1">248.51</data>
+</node>
+<node id="1563324357">
+  <data key="d0">60.3</data>
+  <data key="d1">252.52</data>
+</node>
+<node id="414035791">
+  <data key="d0">108.39</data>
+  <data key="d1">0.0</data>
+</node>
+<node id="cluster_1563324002_1563324346">
+  <data key="d0">105.73</data>
+  <data key="d1">184.08</data>
+</node>
+<node id="cluster_1563324004_1563324334">
+  <data key="d0">106.82</data>
+  <data key="d1">218.0</data>
+</node>
+<node id="cluster_1563324010_1563324356">
+  <data key="d0">103.85</data>
+  <data key="d1">326.67</data>
+</node>
+<node id="cluster_1563324333_1563324337">
+  <data key="d0">62.57</data>
+  <data key="d1">131.0</data>
+</node>
+<edge source="1154147726" target="cluster_1563324010_1563324356">
+  <data key="d2">-99829039#9</data>
+  <data key="d3">26.799332443085518</data>
+</edge>
+<edge source="1154147726" target="1154147727">
+  <data key="d2">-99829041#0</data>
+  <data key="d3">61.58747031661552</data>
+</edge>
+<edge source="1154147726" target="1154147728">
+  <data key="d2">99829041#1</data>
+  <data key="d3">104.58246506943696</data>
+</edge>
+<edge source="1154147727" target="1154147726">
+  <data key="d2">99829041#0</data>
+  <data key="d3">61.58747031661552</data>
+</edge>
+<edge source="1154147728" target="1154147726">
+  <data key="d2">-99829041#1</data>
+  <data key="d3">104.58246506943696</data>
+</edge>
+<edge source="1563324011" target="cluster_1563324002_1563324346">
+  <data key="d2">142865483</data>
+  <data key="d3">96.21382425020091</data>
+</edge>
+<edge source="1563324324" target="414035791">
+  <data key="d2">-99829039#0</data>
+  <data key="d3">60.278462156893156</data>
+</edge>
+<edge source="1563324324" target="cluster_1563324333_1563324337">
+  <data key="d2">142865552#0</data>
+  <data key="d3">108.50704408430512</data>
+</edge>
+<edge source="1563324324" target="1563324336">
+  <data key="d2">99829039#1</data>
+  <data key="d3">76.6378946735882</data>
+</edge>
+<edge source="1563324327" target="cluster_1563324333_1563324337">
+  <data key="d2">142865550</data>
+  <data key="d3">41.246309410600674</data>
+</edge>
+<edge source="1563324336" target="cluster_1563324333_1563324337">
+  <data key="d2">-142865552#1</data>
+  <data key="d3">56.54657846612294</data>
+</edge>
+<edge source="1563324336" target="1563324324">
+  <data key="d2">-99829039#1</data>
+  <data key="d3">76.6378946735882</data>
+</edge>
+<edge source="1563324336" target="cluster_1563324002_1563324346">
+  <data key="d2">99829039#2</data>
+  <data key="d3">47.23957083821107</data>
+</edge>
+<edge source="1563324343" target="1563324344">
+  <data key="d2">-142865547#1</data>
+  <data key="d3">68.47893688176615</data>
+</edge>
+<edge source="1563324343" target="cluster_1563324004_1563324334">
+  <data key="d2">142865547#2</data>
+  <data key="d3">49.035704722267326</data>
+</edge>
+<edge source="1563324343" target="1563324357">
+  <data key="d2">142865551#0</data>
+  <data key="d3">34.70030835597864</data>
+</edge>
+<edge source="1563324344" target="cluster_1563324002_1563324346">
+  <data key="d2">-142865547#0</data>
+  <data key="d3">54.72516757648734</data>
+</edge>
+<edge source="1563324344" target="cluster_1563324333_1563324337">
+  <data key="d2">-142865549#1</data>
+  <data key="d3">43.43913508524589</data>
+</edge>
+<edge source="1563324344" target="1563324343">
+  <data key="d2">142865547#1</data>
+  <data key="d3">68.47893688176615</data>
+</edge>
+<edge source="1563324348" target="cluster_1563324004_1563324334">
+  <data key="d2">-99829039#6</data>
+  <data key="d3">42.658470105294676</data>
+</edge>
+<edge source="1563324348" target="1563324349">
+  <data key="d2">142865548#0</data>
+  <data key="d3">51.86931803855617</data>
+</edge>
+<edge source="1563324348" target="cluster_1563324010_1563324356">
+  <data key="d2">99829039#7</data>
+  <data key="d3">66.09921045187428</data>
+</edge>
+<edge source="1563324349" target="1563324348">
+  <data key="d2">-142865548#0</data>
+  <data key="d3">51.86931803855618</data>
+</edge>
+<edge source="1563324349" target="1563324357">
+  <data key="d2">-142865551#1</data>
+  <data key="d3">30.42090399708728</data>
+</edge>
+<edge source="1563324349" target="cluster_1563324010_1563324356">
+  <data key="d2">142865548#1</data>
+  <data key="d3">84.23799224749341</data>
+</edge>
+<edge source="1563324353" target="1563324357">
+  <data key="d2">142865553</data>
+  <data key="d3">30.940951827634517</data>
+</edge>
+<edge source="1563324357" target="1563324343">
+  <data key="d2">-142865551#0</data>
+  <data key="d3">34.70030835597864</data>
+</edge>
+<edge source="1563324357" target="1563324353">
+  <data key="d2">-142865553</data>
+  <data key="d3">30.940951827634517</data>
+</edge>
+<edge source="1563324357" target="1563324349">
+  <data key="d2">142865551#1</data>
+  <data key="d3">30.42090399708728</data>
+</edge>
+<edge source="414035791" target="1563324324">
+  <data key="d2">99829039#0</data>
+  <data key="d3">60.278462156893156</data>
+</edge>
+<edge source="cluster_1563324002_1563324346" target="1563324011">
+  <data key="d2">-142865483</data>
+  <data key="d3">96.21382425020091</data>
+</edge>
+<edge source="cluster_1563324002_1563324346" target="1563324336">
+  <data key="d2">-99829039#2</data>
+  <data key="d3">47.23957083821107</data>
+</edge>
+<edge source="cluster_1563324002_1563324346" target="1563324344">
+  <data key="d2">142865547#0</data>
+  <data key="d3">54.72516757648734</data>
+</edge>
+<edge source="cluster_1563324002_1563324346" target="cluster_1563324004_1563324334">
+  <data key="d2">99829039#4</data>
+  <data key="d3">33.956158840438334</data>
+</edge>
+<edge source="cluster_1563324004_1563324334" target="cluster_1563324010_1563324356">
+  <data key="d2">-142865484</data>
+  <data key="d3">136.61356950929587</data>
+</edge>
+<edge source="cluster_1563324004_1563324334" target="1563324343">
+  <data key="d2">-142865547#2</data>
+  <data key="d3">49.035704722267326</data>
+</edge>
+<edge source="cluster_1563324004_1563324334" target="cluster_1563324002_1563324346">
+  <data key="d2">-99829039#4</data>
+  <data key="d3">33.956158840438334</data>
+</edge>
+<edge source="cluster_1563324004_1563324334" target="1563324348">
+  <data key="d2">99829039#6</data>
+  <data key="d3">42.658470105294676</data>
+</edge>
+<edge source="cluster_1563324010_1563324356" target="1563324349">
+  <data key="d2">-142865548#1</data>
+  <data key="d3">84.2379922474934</data>
+</edge>
+<edge source="cluster_1563324010_1563324356" target="1563324348">
+  <data key="d2">-99829039#7</data>
+  <data key="d3">66.09921045187428</data>
+</edge>
+<edge source="cluster_1563324010_1563324356" target="cluster_1563324004_1563324334">
+  <data key="d2">142865484</data>
+  <data key="d3">136.6135695092959</data>
+</edge>
+<edge source="cluster_1563324010_1563324356" target="1154147726">
+  <data key="d2">99829039#9</data>
+  <data key="d3">26.799332443085518</data>
+</edge>
+<edge source="cluster_1563324333_1563324337" target="1563324327">
+  <data key="d2">-142865550</data>
+  <data key="d3">41.246309410600674</data>
+</edge>
+<edge source="cluster_1563324333_1563324337" target="1563324324">
+  <data key="d2">-142865552#0</data>
+  <data key="d3">108.50704408430514</data>
+</edge>
+<edge source="cluster_1563324333_1563324337" target="1563324344">
+  <data key="d2">142865549#1</data>
+  <data key="d3">43.43913508524589</data>
+</edge>
+<edge source="cluster_1563324333_1563324337" target="1563324336">
+  <data key="d2">142865552#1</data>
+  <data key="d3">56.54657846612293</data>
+</edge>
+</graph></graphml>

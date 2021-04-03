@@ -1,0 +1,6 @@
+float32 stamp
+string name
+string node_done
+---
+float32[] departs
+string[] task

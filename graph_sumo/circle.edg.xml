@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Monday 09 March 2020 01:12:11 PM IST by Eclipse SUMO netedit Version 1.2.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <output>
+        <output-file value="/home/armslab/Desktop/networks_SUMO/Circle/circle.net.xml"/>
+        <plain-output-prefix value="/home/armslab/Desktop/networks_SUMO/Circle/circle"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+</configuration>
+-->
+
+<edges version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge id="-gneE1" from="gneJ3" to="gneJ2" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE10" from="gneJ12" to="gneJ11" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE11" from="gneJ13" to="gneJ12" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE12" from="gneJ2" to="gneJ13" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE2" from="gneJ4" to="gneJ3" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE3" from="gneJ5" to="gneJ4" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE4" from="gneJ6" to="gneJ5" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE5" from="gneJ7" to="gneJ6" priority="-1" numLanes="1" speed="11.00" shape="401.75,-100.03 401.75,0.00" spreadType="center" width="3.50"/>
+    <edge id="-gneE6" from="gneJ8" to="gneJ7" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE7" from="gneJ9" to="gneJ8" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE8" from="gneJ10" to="gneJ9" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="-gneE9" from="gneJ11" to="gneJ10" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE1" from="gneJ2" to="gneJ3" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE10" from="gneJ11" to="gneJ12" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE11" from="gneJ12" to="gneJ13" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE12" from="gneJ13" to="gneJ2" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE2" from="gneJ3" to="gneJ4" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE3" from="gneJ4" to="gneJ5" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE4" from="gneJ5" to="gneJ6" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE5" from="gneJ6" to="gneJ7" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE6" from="gneJ7" to="gneJ8" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE7" from="gneJ8" to="gneJ9" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE8" from="gneJ9" to="gneJ10" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+    <edge id="gneE9" from="gneJ10" to="gneJ11" priority="-1" numLanes="1" speed="11.00" width="3.50"/>
+</edges>
