@@ -66,6 +66,11 @@ class CR:
         else:
             idles = [1 for i in range(len(neigh))]
         print(node,neigh,idles)
+
+        if node in self.dead_nodes:
+            for n in neigh:
+                self.network_arr[n]['node_{}'.format(node)] = 0
+
         max_id = 0
         if len(neigh) > 1:
             max_ids = list(np.where(idles == np.amax(idles))[0])
@@ -76,7 +81,7 @@ class CR:
 
     def callback_ready(self, req):
         algo_name = req.algo
-        if algo_name == 'without_intent' and self.ready:
+        if algo_name == 'with_intent' and self.ready:
             return AlgoReadyResponse(True)
         else:
             return AlgoReadyResponse(False)
