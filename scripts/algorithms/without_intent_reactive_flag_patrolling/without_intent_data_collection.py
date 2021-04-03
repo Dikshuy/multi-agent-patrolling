@@ -56,7 +56,7 @@ class CR:
                 self.global_idle[node_index] = 0
                 if n not in self.dead_nodes:
                     self.network_arr['node_{}'.format(n)][n] = 0
-                    for neigh_node in list(self.graph.successors(n)) :
+                    for neigh_node in list(self.graph.predecessors(n)) :
                         if neigh_node not in self.dead_nodes:
                             self.network_arr['node_{}'.format(neigh_node)][n] = 0.
             self.global_idle +=dev

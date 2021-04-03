@@ -1,0 +1,10 @@
+use_sim_time: true
+graph: grid_5_5
+init_bots: 1
+init_locations: ''
+done: false
+sim_length: 20000
+random_string: woi_reactive_flag15
+algo_name: random_coordinator
+no_of_deads: 8
+run_id: 2

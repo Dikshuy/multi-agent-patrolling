@@ -4,5 +4,7 @@ init_bots: 1
 init_locations: ''
 done: false
 sim_length: 20000
-random_string: test
-algo_name: random_mrpp
+random_string: woi_reactive_flag10
+algo_name: random_coordinator
+no_of_deads: 6
+run_id: 0
