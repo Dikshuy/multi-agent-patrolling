@@ -11,7 +11,7 @@ import networkx as nx
 from mrpp_sumo.srv import NextTaskBot, NextTaskBotResponse, AlgoReady, AlgoReadyResponse
 from mrpp_sumo.msg import AtNode
 import random as rn
-
+import sys
 class CR:
 
     def __init__(self, g, num_bots):
@@ -19,7 +19,7 @@ class CR:
         self.graph = g
         self.stamp = 0.
         self.num_bots = num_bots
-        self.no_of_deads = 5
+        
 
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)

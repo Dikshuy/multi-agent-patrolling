@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-Conscientious Reactive
+Without intent
 '''
 
 import rospkg
@@ -11,6 +11,8 @@ import networkx as nx
 from mrpp_sumo.srv import NextTaskBot, NextTaskBotResponse, AlgoReady, AlgoReadyResponse
 from mrpp_sumo.msg import AtNode
 import random as rn
+import sys
+import os
 
 class CR:
 
@@ -19,15 +21,15 @@ class CR:
         self.graph = g
         self.stamp = 0.
         self.num_bots = num_bots
-        self.no_of_deads = 5
-
+        self.no_of_deads = int(sys.argv[1])
+        self.saving_path = sys.argv[2]
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
 
         # Variable for storing data in sheets
-        self.data_arr = np.zeros(0)
+        self.data_arr = np.zeros([1,len(self.nodes)])
         self.global_idle = np.zeros(len(self.nodes))
-        self.stamps = np.zeros(0) 
+        self.stamps = np.zeros(1) 
 
 
         self.network_arr = {}   #For storing data of all IoT devices
@@ -38,11 +40,9 @@ class CR:
                 self.network_arr['node_{}'.format(i)][n] = 0.
         rospy.Service('algo_ready', AlgoReady, self.callback_ready)
         self.ready = True
-        # print(self.network_arr)
         
 
     def callback_idle(self, data):
-        # print(self.network_arr["node_0"][self.dead_nodes[0]])
         if self.stamp < data.stamp:
             dev = data.stamp - self.stamp
             self.stamp = data.stamp
@@ -52,12 +52,16 @@ class CR:
                     self.network_arr['node_{}'.format(n)][i] += dev
 
             for n in data.node_id:
+                node_index = self.nodes.index(n)
+                self.global_idle[node_index] = 0
                 if n not in self.dead_nodes:
                     self.network_arr['node_{}'.format(n)][n] = 0
                     for neigh_node in list(self.graph.successors(n)) :
                         if neigh_node not in self.dead_nodes:
                             self.network_arr['node_{}'.format(neigh_node)][n] = 0.
-            # self.global_idle +=dev
+            self.global_idle +=dev
+            self.stamps = np.append(self.stamps,self.stamp)
+            self.data_arr = np.append(self.data_arr,[self.global_idle],axis=0)
 
             
     
@@ -67,12 +71,6 @@ class CR:
         bot = req.name
         neigh = list(self.graph.successors(node))
         idles = []
-        # self.global_idle[node] = 0
-        # if node not in self.dead_nodes:
-        #     self.network_arr['node_{}'.format(node)][node] = 0
-        #     for neigh_node in list(self.graph.successors(node)) :
-        #         if neigh_node not in self.dead_nodes:
-        #             self.network_arr['node_{}'.format(neigh_node)][node] = 0.
 
         if node not in self.dead_nodes:
             # print(node,self.dead_nodes)
@@ -80,7 +78,6 @@ class CR:
                 idles.append(self.network_arr['node_{}'.format(node)][n])
         else:
             idles = [1 for i in range(len(neigh))]
-        print(node,neigh,idles)
         max_id = 0
         if len(neigh) > 1:
             max_ids = list(np.where(idles == np.amax(idles))[0])
@@ -96,8 +93,13 @@ class CR:
         else:
             return AlgoReadyResponse(False)
 
-    def save_sheet():
-        print("data_saved")
+    def save_data(self):
+        self.data_arr = np.append(np.transpose([self.stamps]),self.data_arr,axis=1)
+        rospack = rospkg.RosPack()
+        print("Saving data")
+        np.save(self.saving_path+"/data.npy",self.data_arr)
+        np.save(self.saving_path+"/dead_nodes.npy",self.dead_nodes)
+        print("Data saved!")
 
 if __name__ == '__main__':
     rospy.init_node('cr', anonymous= True)
@@ -115,3 +117,4 @@ if __name__ == '__main__':
     done = False
     while not done and not rospy.is_shutdown():
         done = rospy.get_param('/done')
+    s.save_data()
