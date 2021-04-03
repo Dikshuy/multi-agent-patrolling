@@ -26,7 +26,7 @@ class CR:
 
         # Variable for storing data in sheets
         self.data_arr = np.zeros(0)
-        self.global_idle = np.zeros(len(nodes))
+        self.global_idle = np.zeros(len(self.nodes))
         self.stamps = np.zeros(0) 
 
 
