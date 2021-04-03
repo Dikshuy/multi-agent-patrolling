@@ -19,7 +19,7 @@ class CR:
         self.graph = g
         self.stamp = 0.
         self.num_bots = num_bots
-        self.no_of_deads = 1
+        self.no_of_deads = 5
 
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
@@ -34,7 +34,6 @@ class CR:
         self.ready = True
         # print(self.network_arr)
         
-
     def callback_idle(self, data):
         # print(self.network_arr["node_0"][self.dead_nodes[0]])
         if self.stamp < data.stamp:
@@ -44,9 +43,7 @@ class CR:
             for n in self.nodes:
                 for i in self.nodes:
                     self.network_arr['node_{}'.format(n)][i] += dev
-
-            
-    
+ 
     def callback_next_task(self, req):
         node = req.node_done
         t = req.stamp
@@ -59,24 +56,25 @@ class CR:
                 if neigh_node not in self.dead_nodes:
                     self.network_arr['node_{}'.format(neigh_node)][node] = 0.
 
-        if node not in self.dead_nodes:
-            # print(node,self.dead_nodes)
             for n in neigh:
                 idles.append(self.network_arr['node_{}'.format(node)][n])
         else:
             idles = [1 for i in range(len(neigh))]
+
         print(node,neigh,idles)
+
         max_id = 0
         if len(neigh) > 1:
             max_ids = list(np.where(idles == np.amax(idles))[0])
             max_id = rn.sample(max_ids, 1)[0]
         next_walk = [node, neigh[max_id]]
+        self.network_arr['node_{}'.format(node)][neigh[max_id]] = 0
         next_departs = [t]
         return NextTaskBotResponse(next_departs, next_walk)
 
     def callback_ready(self, req):
         algo_name = req.algo
-        if algo_name == 'without_intent' and self.ready:
+        if algo_name == 'with_intent' and self.ready:
             return AlgoReadyResponse(True)
         else:
             return AlgoReadyResponse(False)
