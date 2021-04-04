@@ -34,7 +34,7 @@ if __name__ == '__main__':
         init_bots = [1, 2, 4, 6]
         no_of_deads = [0, 1, 3, 6,8]
         no_runs = 3
-        sim_length = 20000
+        sim_length = 30000
         # discount_factors = [1]
         i = 0
         for _ in range(multiplicity):
@@ -44,7 +44,7 @@ if __name__ == '__main__':
                         for run_id in range(no_runs):
                             graph = nx.read_graphml(dir_name + '/graph_ml/' + g + '.graphml')
                             i += 1
-                            with open(dir_name + '/config/without_intent_reactive_flag/woi_reactive_flag{}.yaml'.format(i), 'w') as f:
+                            with open(dir_name + '/config/without_intent_reactive_flag/without_intent_reactive_flag{}.yaml'.format(i), 'w') as f:
                                 f.write('use_sim_time: true\n')
                                 f.write('graph: {}\n'.format(g))
                                 # f.write('priority_nodes: {}\n'.format(' '.join(prior_nodes)))
@@ -58,7 +58,7 @@ if __name__ == '__main__':
                                 f.write('done: false\n')
                                 f.write('sim_length: {}\n'.format(sim_length))
                                 # f.write('discount_factor: {}\n'.format(d))
-                                f.write('random_string: woi_reactive_flag{}\n'.format(i))
+                                f.write('random_string: without_intent_reactive_flag{}\n'.format(i))
                                 f.write('algo_name: {}\n'.format(algo_name))
                                 f.write('no_of_deads: {}\n'.format(deads))
                                 f.write('run_id: {}'.format(run_id))
