@@ -77,7 +77,7 @@ class CR:
 
     def callback_ready(self, req):
         algo_name = req.algo
-        if algo_name == 'without_intent_reactive_flag' and self.ready:
+        if algo_name == 'with_intent' and self.ready:
             return AlgoReadyResponse(True)
         else:
             return AlgoReadyResponse(False)
