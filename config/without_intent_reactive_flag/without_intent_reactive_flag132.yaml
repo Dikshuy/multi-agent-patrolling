@@ -1,0 +1,10 @@
+use_sim_time: true
+graph: first
+init_bots: 1
+init_locations: ''
+done: false
+sim_length: 30000
+random_string: without_intent_reactive_flag132
+algo_name: without_intent_reactive_flag
+no_of_deads: 6
+run_id: 2
