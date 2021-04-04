@@ -26,11 +26,11 @@ dirname = rospkg.RosPack().get_path('mrpp_sumo')
 
 # %%
 #name of the yaml/output files
-name = 'arv25'
+name = 'with_intent'
 
 #path to directory containing 'config' and 'outputs'
-dirdata = '/home/sdeepakmallya/data_hd/mrpp_sumo_backup/27_01_2021/'
-
+# dirdata = '/home/sdeepakmallya/data_hd/mrpp_sumo_backup/27_01_2021/'
+dirdata = '/home/dikshant/pat_ws/src/patrolling_final_codes'
 
 # %%
 #get config and parameters
