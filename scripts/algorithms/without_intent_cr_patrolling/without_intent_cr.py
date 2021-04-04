@@ -19,8 +19,7 @@ class CR:
         self.graph = g
         self.stamp = 0.
         self.num_bots = num_bots
-        self.no_of_deads = 2
-
+        self.no_of_deads = rospy.get_param("/no_of_deads")
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
         print(self.dead_nodes)
