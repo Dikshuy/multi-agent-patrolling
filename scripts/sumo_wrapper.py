@@ -103,7 +103,7 @@ def main():
     file_path1 = dirname + '/outputs/{}_visits.in'.format(file_name)
     g = nx.read_graphml(dirname + '/graph_ml/' + graph_name + '.graphml')
     s = Sumo_Wrapper(g, file_path, file_path1)
-    sumo_startup = ['sumo', '-c', dirname + '/graph_sumo/{}.sumocfg'.format(graph_name), '--fcd-output', dirname + '/outputs/{}_vehicle.xml'.format(file_name)]
+    sumo_startup = ['sumo-gui', '-c', dirname + '/graph_sumo/{}.sumocfg'.format(graph_name), '--fcd-output', dirname + '/outputs/{}_vehicle.xml'.format(file_name)]
     # sumo_startup = ['sumo-gui', '-c', dirname + '/graph_sumo/{}.sumocfg'.format(graph_name)]
     traci.start(sumo_startup)
 
