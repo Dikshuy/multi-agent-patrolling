@@ -22,7 +22,7 @@ class CR:
         self.no_of_deads = rospy.get_param("/no_of_deads")
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
-        print(self.dead_nodes)
+        # print(self.dead_nodes)
         self.network_arr = {}
     
         for i in self.nodes:
@@ -45,7 +45,7 @@ class CR:
                     for n in self.nodes:
                         self.network_arr['node_{}'.format(i)][n][cars] += dev
 
-        print(self.network_arr)
+        # print(self.network_arr)
  
     def callback_next_task(self, req):
         for cars in range(self.num_bots):
@@ -61,12 +61,12 @@ class CR:
                         self.network_arr['node_{}'.format(neigh_node)][node][cars] = 0.
 
                 for n in neigh:
-                    print(self.network_arr['node_{}'.format(node)][n][cars])
+                    # print(self.network_arr['node_{}'.format(node)][n][cars])
                     idles.append(self.network_arr['node_{}'.format(node)][n][cars])
             else:
                 idles = [1 for i in range(len(neigh))]
 
-            print(cars,node,neigh,idles)
+            # print(cars,node,neigh,idles)
 
             max_id = 0
             if len(neigh) > 1:
