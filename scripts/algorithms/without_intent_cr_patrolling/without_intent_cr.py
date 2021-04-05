@@ -11,18 +11,33 @@ import networkx as nx
 from mrpp_sumo.srv import NextTaskBot, NextTaskBotResponse, AlgoReady, AlgoReadyResponse
 from mrpp_sumo.msg import AtNode
 import random as rn
-
+from numpy.random import default_rng
+rng = default_rng()
 class CR:
 
     def __init__(self, g, num_bots):
+
+        self.dirname = rospkg.RosPack().get_path('mrpp_sumo')
+        self.name = rospy.get_param("/random_string")
+        self.sim_dir = self.dirname + '/post_process/without_intent_cr/' + self.name
+        os.mkdir(self.sim_dir)
+
+
         self.ready = False
         self.graph = g
         self.stamp = 0.
         self.num_bots = num_bots
         self.no_of_deads = rospy.get_param("/no_of_deads")
         self.nodes = list(self.graph.nodes())
-        self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
+        self.dead_nodes = rng.choice([i for i in range(len(self.nodes))],self.no_of_deads,replace=False)
         # print(self.dead_nodes)
+
+        # Variable for storing data in sheets
+        self.data_arr = np.zeros([1,len(self.nodes)])
+        self.global_idle = np.zeros(len(self.nodes))
+        self.stamps = np.zeros(1) 
+
+
         self.network_arr = {}
     
         for i in self.nodes:

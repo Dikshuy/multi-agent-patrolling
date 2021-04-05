@@ -13,17 +13,29 @@ from mrpp_sumo.msg import AtNode
 import random as rn
 import sys
 import os
-
+from numpy.random import default_rng
+rng = default_rng()
 class CR:
 
     def __init__(self, g, num_bots):
+
+        self.dirname = rospkg.RosPack().get_path('mrpp_sumo')
+        self.name = rospy.get_param("/random_string")
+        self.sim_dir = self.dirname + '/post_process/with_intent/' + self.name
+        os.mkdir(self.sim_dir)
+
         self.ready = False
         self.graph = g
         self.stamp = 0.
         self.num_bots = num_bots
         self.no_of_deads = rospy.get_param("/no_of_deads")
         self.nodes = list(self.graph.nodes())
-        self.dead_nodes = rn.sample(self.nodes,self.no_of_deads)
+        self.dead_nodes = rng.choice([i for i in range(len(self.nodes))],self.no_of_deads,replace=False)
+
+        # Variable for storing data in sheets
+        self.data_arr = np.zeros([1,len(self.nodes)])
+        self.global_idle = np.zeros(len(self.nodes))
+        self.stamps = np.zeros(1) 
 
         self.network_arr = {}   #For storing data of all IoT devices
 
@@ -45,12 +57,17 @@ class CR:
                     self.network_arr['node_{}'.format(n)][i] += dev
 
             for n in data.node_id:
+                node_index = self.nodes.index(n)
+                self.global_idle[node_index] = 0
                 if n not in self.dead_nodes:
                     self.network_arr['node_{}'.format(n)][n] = 0
                     for neigh_node in list(self.graph.predecessors(n)) :
                         if neigh_node not in self.dead_nodes:
                             self.network_arr['node_{}'.format(neigh_node)][n] = 0.
 
+            self.global_idle +=dev
+            self.stamps = np.append(self.stamps,self.stamp)
+            self.data_arr = np.append(self.data_arr,[self.global_idle],axis=0)
             
     
     def callback_next_task(self, req):
@@ -82,6 +99,12 @@ class CR:
         else:
             return AlgoReadyResponse(False)
 
+    def save_data(self):
+        print("Saving data")
+        np.save(self.sim_dir+"/data.npy",self.data_arr)
+        np.save(self.sim_dir+"/dead_nodes.npy",self.dead_nodes)
+        np.save(self.sim_dir+"/stamps.npy",self.stamps)
+        print("Data saved!")
 
 
 if __name__ == '__main__':
@@ -100,3 +123,4 @@ if __name__ == '__main__':
     done = False
     while not done and not rospy.is_shutdown():
         done = rospy.get_param('/done')
+    s.save_data()

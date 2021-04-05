@@ -1,10 +1,10 @@
 use_sim_time: true
-graph: grid_5_5
-init_bots: 1
+graph: complex_final
+init_bots: 3
 init_locations: ''
 done: false
 sim_length: 30000
 random_string: with_intent8
 algo_name: with_intent
-no_of_deads: 3
+no_of_deads: 1
 run_id: 1
