@@ -59,6 +59,7 @@ class CR:
             for n in data.node_id:
                 node_index = self.nodes.index(n)
                 self.global_idle[node_index] = 0
+                
                 if n not in self.dead_nodes:
                     self.network_arr['node_{}'.format(n)][n] = 0
                     for neigh_node in list(self.graph.predecessors(n)) :
