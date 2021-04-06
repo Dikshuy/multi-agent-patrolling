@@ -29,7 +29,7 @@ class CR:
         self.num_bots = num_bots
         self.no_of_deads = rospy.get_param("/no_of_deads")
         self.nodes = list(self.graph.nodes())
-        self.dead_nodes = rng.choice([i for i in range(len(self.nodes))],self.no_of_deads,replace=False)
+        self.dead_nodes = rng.choice([i for i in range(self.nodes)],self.no_of_deads,replace=False)
         # print(self.dead_nodes)
 
         # Variable for storing data in sheets
