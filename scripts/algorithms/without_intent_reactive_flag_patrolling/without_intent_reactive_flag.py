@@ -32,7 +32,7 @@ class CR:
         self.no_of_deads = rospy.get_param("/no_of_deads")
         self.nodes = list(self.graph.nodes())
         self.dead_nodes = rng.choice(self.nodes,self.no_of_deads,replace=False)
-
+        
         # Variable for storing data in sheets
         self.data_arr = np.zeros([1,len(self.nodes)])
         self.global_idle = np.zeros(len(self.nodes))

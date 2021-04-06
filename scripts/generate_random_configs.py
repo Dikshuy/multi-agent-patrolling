@@ -19,7 +19,7 @@ if __name__ == '__main__':
         graph_name = ['complex_final']
         multiplicity = 1
 
-        algo_name = 'without_intent_cr'
+        algo_name = 'with_intent'
         vel = 10.
         # prior_nodes = rn.sample(graph.nodes(), num_priority)
         # prior_nodes = ['0', '4', '20', '24']
@@ -32,8 +32,8 @@ if __name__ == '__main__':
         # max_divisions = 10
         # eps_prob = 0
         init_bots = [1, 3, 5, 7]
-        no_of_deads = [1,12,25]
-        no_runs = 2
+        no_of_deads = [0,7,12,18,25]
+        no_runs = 3
         sim_length = 30000
         # discount_factors = [1]
         i = 0
@@ -44,7 +44,7 @@ if __name__ == '__main__':
                         for run_id in range(no_runs):
                             graph = nx.read_graphml(dir_name + '/graph_ml/' + g + '.graphml')
                             i += 1
-                            with open(dir_name + '/config/without_intent_cr/without_intent_cr{}.yaml'.format(i), 'w') as f:
+                            with open(dir_name + '/config/with_intent/with_intent{}.yaml'.format(i), 'w') as f:
                                 f.write('use_sim_time: true\n')
                                 f.write('graph: {}\n'.format(g))
                                 # f.write('priority_nodes: {}\n'.format(' '.join(prior_nodes)))
@@ -58,7 +58,7 @@ if __name__ == '__main__':
                                 f.write('done: false\n')
                                 f.write('sim_length: {}\n'.format(sim_length))
                                 # f.write('discount_factor: {}\n'.format(d))
-                                f.write('random_string: without_intent_cr{}\n'.format(i))
+                                f.write('random_string: with_intent{}\n'.format(i))
                                 f.write('algo_name: {}\n'.format(algo_name))
                                 f.write('no_of_deads: {}\n'.format(deads))
                                 f.write('run_id: {}'.format(run_id))
