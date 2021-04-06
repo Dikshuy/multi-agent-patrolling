@@ -69,7 +69,7 @@ class CR:
             self.global_idle +=dev
             self.stamps = np.append(self.stamps,self.stamp)
             self.data_arr = np.append(self.data_arr,[self.global_idle],axis=0)
-            print(self.global_idle,self.nodes,n,node_index)
+            # print(self.global_idle,self.nodes,n,node_index)
     
     def callback_next_task(self, req):
         node = req.node_done
