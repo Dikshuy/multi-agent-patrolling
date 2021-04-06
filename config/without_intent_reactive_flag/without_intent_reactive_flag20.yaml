@@ -5,6 +5,6 @@ init_locations: ''
 done: false
 sim_length: 30000
 random_string: without_intent_reactive_flag20
-algo_name: with_intent
+algo_name: without_intent_reactive_flag
 no_of_deads: 7
 run_id: 1
