@@ -35,8 +35,8 @@ if __name__ == '__main__':
         # no_of_deads = [0,7,12,18,25]
         # no_runs = 3
 
-        init_bots = [1,3]
-        no_of_deads = [1,2,3]
+        init_bots = [1]
+        no_of_deads = [1]
         no_runs = 3
         sim_length = 30000
         # discount_factors = [1]
