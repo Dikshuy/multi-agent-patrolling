@@ -19,7 +19,7 @@ if __name__ == '__main__':
         graph_name = ['complex_final']
         multiplicity = 1
 
-        algo_name = 'with_intent'
+        algo_name = 'without_intent_reactive_flag'
         vel = 10.
         # prior_nodes = rn.sample(graph.nodes(), num_priority)
         # prior_nodes = ['0', '4', '20', '24']
