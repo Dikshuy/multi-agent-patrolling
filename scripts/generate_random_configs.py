@@ -31,13 +31,10 @@ if __name__ == '__main__':
         # len_walks = [40, 80, 120]
         # max_divisions = 10
         # eps_prob = 0
-        # init_bots = [1, 3, 5, 7]
-        # no_of_deads = [0,7,12,18,25]
-        # no_runs = 3
+        init_bots = [1, 3, 5, 7]
+        no_of_deads = [0,7,12,18,25]
+        no_runs = 3
 
-        init_bots = [1,2]
-        no_of_deads = [1,2,3]
-        no_runs = 1
         sim_length = 30000
         # discount_factors = [1]
         i = 0
