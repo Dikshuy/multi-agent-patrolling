@@ -105,6 +105,7 @@ class CR:
         np.save(self.sim_dir+"/data.npy",self.data_arr)
         np.save(self.sim_dir+"/dead_nodes.npy",self.dead_nodes)
         np.save(self.sim_dir+"/stamps.npy",self.stamps)
+        np.save(self.sim_dir+"/nodes.npy",np.array(self.nodes))
         print("Data saved!")
 
 
