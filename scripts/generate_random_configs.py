@@ -36,7 +36,7 @@ if __name__ == '__main__':
         # no_runs = 3
 
         init_bots = [1]
-        no_of_deads = [1]
+        no_of_deads = [2]
         no_runs = 3
         sim_length = 30000
         # discount_factors = [1]
