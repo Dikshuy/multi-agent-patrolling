@@ -3,7 +3,7 @@
 '''
 Conscientious Reactive
 '''
-
+ 
 import rospkg
 import numpy as np
 import rospy
@@ -11,6 +11,7 @@ import networkx as nx
 from mrpp_sumo.srv import NextTaskBot, NextTaskBotResponse, AlgoReady, AlgoReadyResponse
 from mrpp_sumo.msg import AtNode
 import random as rn
+import os
 from numpy.random import default_rng
 rng = default_rng()
 class CR:
@@ -51,6 +52,7 @@ class CR:
         
     def callback_idle(self, data):
         # print(self.network_arr["node_0"][self.dead_nodes[0]])
+        temp = 0
         for cars in range(self.num_bots):
             if self.stamp < data.stamp:
                 dev = data.stamp - self.stamp
@@ -59,6 +61,14 @@ class CR:
                 for i in self.nodes:
                     for n in self.nodes:
                         self.network_arr['node_{}'.format(i)][n][cars] += dev
+                if temp ==0:
+                    for n in data.node_id:
+                        node_index = self.nodes.index(n)
+                        self.global_idle[node_index] = 0
+                    self.global_idle +=dev
+                    self.stamps = np.append(self.stamps,self.stamp)
+                    self.data_arr = np.append(self.data_arr,[self.global_idle],axis=0)
+                    temp +=1
 
         # print(self.network_arr)
  
@@ -98,8 +108,14 @@ class CR:
         else:
             return AlgoReadyResponse(False)
 
-    def save_sheet():
-        print("data_saved")
+    def save_data(self):
+        print("Saving data")
+        np.save(self.sim_dir+"/data.npy",self.data_arr)
+        np.save(self.sim_dir+"/dead_nodes.npy",self.dead_nodes)
+        np.save(self.sim_dir+"/stamps.npy",self.stamps)
+        np.save(self.sim_dir+"/nodes.npy",np.array(self.nodes))
+        # print(self.dead_nodes)
+        print("Data saved!")
 
 if __name__ == '__main__':
     rospy.init_node('cr', anonymous= True)
@@ -117,3 +133,4 @@ if __name__ == '__main__':
     done = False
     while not done and not rospy.is_shutdown():
         done = rospy.get_param('/done')
+    s.save_data()
