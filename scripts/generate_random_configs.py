@@ -16,7 +16,8 @@ import tpbp_functions as fn
 if __name__ == '__main__':
     dir_name = rospkg.RosPack().get_path('mrpp_sumo')
     if len(sys.argv[1:]) == 0:
-        graph_name = ['complex_final','grid_5_5','first']
+        graph_name = ['complex_final','grid_5_5','first','grid_5_5_final']
+
         multiplicity = 1
 
         algo_name = 'with_intent'
