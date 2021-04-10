@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu 11 Mar 2021 04:59:06 PM IST by Eclipse SUMO netedit Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/home/dikshant/github/pat_code/maps/grid_5_5_final.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/dikshant/github/pat_code/maps/grid_5_5_final.net.xml"/>
+        <plain-output-prefix value="/home/dikshant/github/pat_code/maps/grid_5_5_final.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<nodes version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,400.19,400.00" origBoundary="0.00,0.00,400.00,400.00" projParameter="!"/>
+
+    <node id="0" x="0.00" y="0.00" type="priority"/>
+    <node id="1" x="144.40" y="0.48" type="priority"/>
+    <node id="10" x="0.00" y="246.38" type="priority"/>
+    <node id="11" x="144.63" y="246.38" type="priority"/>
+    <node id="12" x="239.23" y="246.39" type="priority"/>
+    <node id="13" x="322.05" y="246.38" type="priority"/>
+    <node id="14" x="400.08" y="246.30" type="priority"/>
+    <node id="15" x="0.00" y="332.47" type="priority"/>
+    <node id="16" x="144.63" y="332.46" type="priority"/>
+    <node id="17" x="239.19" y="332.55" type="priority"/>
+    <node id="18" x="321.88" y="332.47" type="priority"/>
+    <node id="19" x="400.02" y="332.46" type="priority"/>
+    <node id="2" x="238.75" y="0.17" type="priority"/>
+    <node id="20" x="0.00" y="400.00" type="priority"/>
+    <node id="21" x="144.64" y="400.00" type="priority"/>
+    <node id="22" x="239.10" y="400.00" type="priority"/>
+    <node id="23" x="321.87" y="400.00" type="priority"/>
+    <node id="24" x="400.00" y="400.00" type="priority"/>
+    <node id="3" x="321.62" y="0.70" type="priority"/>
+    <node id="4" x="400.00" y="0.00" type="priority"/>
+    <node id="5" x="0.00" y="149.88" type="priority"/>
+    <node id="6" x="144.63" y="149.88" type="priority"/>
+    <node id="7" x="239.15" y="150.06" type="priority"/>
+    <node id="8" x="322.09" y="150.42" type="priority"/>
+    <node id="9" x="400.19" y="150.71" type="priority"/>
+</nodes>
