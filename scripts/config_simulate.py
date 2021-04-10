@@ -6,7 +6,7 @@ import rospkg
 import glob
 
 dir_name = rospkg.RosPack().get_path('mrpp_sumo')
-config_files = glob.glob(dir_name + '/config/without_intent_reactive_flag/without_intent_reactive_flag*.yaml')
+config_files = glob.glob(dir_name + '/config/without_intent_cr/without_intent_cr*.yaml')
 count = 0
 for conf in config_files:
     os.system('xterm -e "{}/tpbp.sh" {}'.format(dir_name, conf))
