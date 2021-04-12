@@ -1,0 +1,10 @@
+use_sim_time: true
+graph: grid_5_5_final
+init_bots: 3
+init_locations: ''
+done: false
+sim_length: 30000
+random_string: without_intent_reactive_flag199
+algo_name: without_intent_reactive_flag
+no_of_deads: 7
+run_id: 0
